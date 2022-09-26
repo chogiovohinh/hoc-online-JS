@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in">
+    <h1 id="ketqua"></h1>
+    <button onclick="kiemtra()">Kiem tra</button>
+    <script>
+        function kiemtra() {
+            let a = document.getElementById("in").value;
+            if( a % 2==0) {
+                document.getElementById("ketqua").innerHTML = "Số Chẵn"
+            }
+            else {
+                document.getElementById("ketqua").innerHTML = "Số Lẻ"
+            }
+        }
+    </script>
+</body>
+</html>

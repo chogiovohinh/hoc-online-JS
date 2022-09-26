@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" id="in1">
+        <input type="text" id="in2">
+        <br> <br>
+        <button onclick="tinhtong()">Addition(+)</button>
+        <button onclick="tinhtru()">Subtraction(-)</button>
+        <button onclick="tinhnhan()">Multiplication(X)</button>
+        <button onclick="tinhchia()">Division(/)</button>
+        <h1 id="res"></h1>
+    </form>
+    <script>
+        let inp1 = +document.getElementById("in1").value;
+        let inp2 = +document.getElementById("in2").value;
+        function tinhtong() {
+            let inp1 = +document.getElementById("in1").value;
+            let inp2 = +document.getElementById("in2").value;
+            document.getElementById("res").innerHTML = "Ket qua la:"+(inp1 + inp2);
+        }
+        function tinhtru() {
+            let inp1 = +document.getElementById("in1").value;
+            let inp2 = +document.getElementById("in2").value;
+            document.getElementById("res").innerHTML = "Ket qua la:"+(inp1 - inp2);
+        }
+        function tinhnhan() {
+            let inp1 = +document.getElementById("in1").value;
+            let inp2 = +document.getElementById("in2").value;
+            document.getElementById("res").innerHTML = "Ket qua la:" +(inp1*inp2);
+        }
+        function tinhchia() {
+            let inp1 = +document.getElementById("in1").value;
+            let inp2 = +document.getElementById("in2").value;
+            document.getElementById("res").innerHTML = "Ket qua la:"+(inp1/inp2);
+        }
+   
+    </script>
+</body>
+</html>
