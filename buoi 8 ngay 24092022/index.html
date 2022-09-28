@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a= prompt("Nhap so a")
+        // if (a>5) {
+        //     alert("A lon hơn 5")
+        // }
+        // if (a<=5) {
+        //     alert("A nho hon 5")
+        // }
+
+// let a = prompt("Nhap so a");
+
+// if (a%2==0 && a>10)  {
+//     alert("Haha")
+// }
+// else {
+//     alert("Hihi")
+// }
+// let a = prompt("Điểm:");
+
+// if ( a < 0 && a > 10) {
+//     alert("Nhập không phù hợp")
+// }
+// else {
+//     if ( a < 5 ) {
+//         alert("Trượt môn")
+//     }
+//     if (5 <= a && a <8) {
+//         alert("Khá");
+//     }
+//     if (a >= 8 && a <= 10) {
+//         alert("Giỏi");
+//     }
+//     }
+       
+        let chieuCao = prompt("nhập chiều cao")
+        let canNang = prompt("nhập cân nặng")
+        let bmi = canNang / (chieuCao*chieuCao) 
+        if(bmi <= 0){
+            alert("nhap sai")
+        }
+        else if (bmi >= 17 && bmi < 18.5  ){
+            alert('gầy')
+        }
+        else if (bmi >= 18.5 && bmi < 25){
+            alert("bình thường")
+        }
+        else if (bmi >= 25 && bmi <= 30){
+            alert("béo")
+        }
+        else{
+            alert("khong binh thuong")
+        }
+
+
+
+    </script>
+</body>
+</html>
