@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let soLan = 0;
+        let soNhapvao;
+        let soCandoan = Math.floor(30*Math.random());
+        while (soLan < 3) {
+            soNhapvao = +prompt("Nhập số vào");
+            if (soNhapvao == soCandoan) {alert("Bạn đã đoán đúng."); break;}
+            else if (soNhapvao < soCandoan) alert("Số bạn nhập nhỏ hơn số cần đoán")
+            else alert('Số bạn nhập vào lớn hơn số cần đoán.');
+            soLan++;
+        }
+        if (soLan == 3) alert("Bạn đã hết lượt chơi.")
+
+    </script>
+</body>
+</html>

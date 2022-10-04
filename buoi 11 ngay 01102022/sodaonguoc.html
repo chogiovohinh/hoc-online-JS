@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="ketqua">
+    <button onclick="tinhtoan()"> Click</button> -->
+    <script>
+        // // let = +document.getElementById("ketqua").value;
+        // // function tinhtoan() {
+
+        // }
+        let so = +prompt("Nhập số:");
+        while(so > 0){
+            let donvi = so%10;
+            document.write(donvi+" ");
+            so = parseInt(so/10);
+        }
+    </script>
+</body>
+</html>

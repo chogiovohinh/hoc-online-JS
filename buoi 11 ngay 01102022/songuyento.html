@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('Nhập số a');
+        let laSNT = true;
+        for(let i=2; i<a; i++){
+            if(a%i==0) {
+               laSNT = false;
+                break;
+            }
+            }
+            if(laSNT) {
+                alert('Số nguyên tố');
+            }
+            else {
+                alert('Không là số nguyên tố');
+            }
+    </script>
+</body>
+</html>
