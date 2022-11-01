@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2</title>
+</head>
+<body>
+    <script>
+        let arr = [6,7,9,12,19,3,27,53];
+        let x= +prompt("Nhập số nguyên x");
+        let index = + prompt("Nhập vị trí index")
+        function insertNumberToArray(arr, x, index){
+    if(arr[index]<0 || arr[index] > arr.lenght){
+        return arr;
+    } else{
+      for(let i=0; i< arr.lenght; i++){
+        if(i ==index){
+            arr[index-1] = x;
+        } 
+      }
+      return arr;
+    }
+}
+        console.log(arr);
+        console.log(insertNumberToArray(arr, x, index));
+        
+    </script>
+</body>
+</html>

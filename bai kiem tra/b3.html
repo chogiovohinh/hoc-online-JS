@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = +prompt("Nhập x:");
+
+    function SNT(x) {
+    let res = true;
+    if (x < 2) return false;
+    else if (x == 2 || x == 3) return res;
+    else {
+        for (let i = 2; i < x; i++) {
+            if (x % i == 0) res = false;
+        }
+        return res;
+    }
+}
+
+    function sumOfPrime(x) {
+    let tong = 0;
+    for (let i = 0; i <= x; i++) {
+        if (SNT(i)) tong += i;
+    }
+    return tong;
+}
+
+    alert(sumOfPrime(x));
+    </script>
+</body>
+</html>
