@@ -1,0 +1,85 @@
+body {
+  background: black;
+}
+.wrap-content {
+  position: relative;
+}
+
+#start {
+  z-index: 10;
+  position: absolute;
+  right: calc(50% + 280px);
+  top: 360px;
+  position: absolute;
+  background: rgb(255, 196, 0);
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:  box-shadow .2s;
+}
+#start:hover {
+  background: #66b3ff;
+  box-shadow: 0 0 25px rgb(102,179,255);
+}
+
+.play {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #fff;
+  margin-left: 10px;
+}
+
+#primary {
+  position: absolute;
+  right: calc(50% - 300px);
+  border: solid 10px #8a7013;
+  border-radius: 20px;
+}
+#startButton {
+  width: 50px;
+  height: 50px;
+}
+.wrap-score {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+.topcard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+}
+#ranking {
+  color: white;
+  font-family: "VT323", monospace;
+  font-size: 1.25rem;
+  flex-wrap: wrap;
+  z-index: 10;
+  position: absolute;
+  width: 150px;
+  height: 420px;
+  right: calc(50% - 300px);
+  background: #66b3ff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 0px 0px 0px 10px #8a7013 inset;
+}
+
+.active {
+  color: yellow;
+}

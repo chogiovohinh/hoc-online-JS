@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Game hung trung</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+	<div class="wrap-content">
+		<canvas id="primary" width="600" height="400"></canvas>
+		<div id="start" onclick="{hungTrung.start()
+		document.getElementById('start').style.display = 'none'
+		}">
+			<div class="play"></div>
+		</div>
+		<div id="ranking">
+			<div class="wrap-score">
+				<div>Score</div>
+				<div id="current-score"></div>
+			</div>
+			<div class="topcard top-0">
+				<div class="norank">Top 1: </div>
+				<div id="top-0"></div>
+			</div>
+			<div class="topcard top-1">
+				<div class="norank">Top 2: </div>
+				<div id="top-1"></div>
+			</div>
+			<div class="topcard top-2">
+				<div class="norank">Top 3: </div>
+				<div id="top-2"></div>
+			</div>
+			<div class="topcard top-3">
+				<div class="norank">Top 4: </div>
+				<div id="top-3"></div>
+			</div>
+			<div class="topcard top-4">
+				<div class="norank">Top 5: </div>
+				<div id="top-4"></div>
+			</div>
+			Your position: <div id="current-position"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/resource.js"></script>
+	<script type="text/javascript" src="js/bar.js"></script>
+	<script type="text/javascript" src="js/chicken.js"></script>
+	<script type="text/javascript" src="js/bowl.js"></script>
+	<script type="text/javascript" src="js/egg.js"></script>
+	<script type="text/javascript" src="js/game.js"></script>
+	<script type="text/javascript" src="js/ranking.js"></script>
+	<script type="text/javascript">
+		var hungTrung = new game();
+		hungTrung.init();
+	// hungTrung.start();
+	// hungTrung.TopScore();
+	</script>
+</body>
+
+</html>
