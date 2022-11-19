@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./tank-1.png.jpg" id="tank" alt="tank" style="top: 100px; left: 100px;position: absolute;">
+    <button onclick="up()">Up</button>
+    <button onclick="down()">Down</button>
+    <button onclick="left()">Left</button>
+    <button onclick="right()">Right</button>
+    <img src="./z3760907034147_9fb640030ac25f6afab0ac0585709d56.jpg" id="boom" alt="boom" style="top: 300px; left: 400px; width: 30px; height: 30px; position: relative;">
+
+
+    <script>
+        function up(){
+           document.getElementById('tank').style.top = parseFloat(document.getElementById('tank').style.top)-50+'px';
+           check()
+        }
+        function down(){
+           document.getElementById('tank').style.top = parseFloat(document.getElementById('tank').style.top)+50+'px';
+           check()
+        }
+        function right(){
+           document.getElementById('tank').style.left = parseFloat(document.getElementById('tank').style.left)+50+'px';
+           check()
+        }
+        function left(){
+           document.getElementById('tank').style.left = parseFloat(document.getElementById('tank').style.left)-50+'px';
+           check()
+        }
+        function check(){
+            let toptank = parseFloat(document.getElementById("tank").style.top);
+            let lefttank = parseFloat(document.getElementById("tank").style.left);
+            if( toptank==300 && lefttank==400) {
+                alert("boom");
+            }
+        }
+    </script>
+</body>
+</html>

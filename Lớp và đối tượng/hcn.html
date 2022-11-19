@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        class Rectangle {
+                constructor(x, y, width, height, color) {
+                    this.x = x;
+                    this.y = y;
+                    this.width = width;
+                    this.height = height;
+                    this.color = color;
+                }
+                getHcn(width, height) {
+                    return this.width;
+                    return this.height;
+                }
+                getDienTich() {
+                    return this.width * this.height
+                }
+                getChuVi() {
+                    return (this.width + this.height) * 2
+                }
+                render(canvas) {
+                var ctx = document.getElementById(canvas).getContext('2d');
+                ctx.fillStyle = this.color;
+                ctx.strokeRect(this.x, this.y, this.width, this.height);
+                }
+            }
+            let rect1 = new Rectangle(50, 50, 100, 70, 'red');
+            let area = rect1.getDienTich();
+            let chuvi = rect1.getChuVi();
+            document.write(" Diện tích là:" +  area+ "<br>");
+            document.write(" Chu vi là:" +  chuvi+ "<br>");
+            rect1.render('myCanvas');
+        </script>
+</body>
+</html>

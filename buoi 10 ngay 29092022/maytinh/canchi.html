@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="year">
+    <button onclick="tinhtoan()" >Kết quả</button>
+    <h1 id="res"></h1>
+    <script>
+        function tinhtoan () {
+        let namduong = document.getElementById("year").value;
+        let can;
+        let Chi;
+        switch (namduong%10) {
+            case 0:
+            can = 'Canh';
+            break;
+            case 1:
+            can = 'Tân';
+            break;
+            case 2:
+            can = 'Nhâm';
+            break;
+            case 3:
+            can = 'Quý';
+            break;
+            case 4:
+            can = 'Giáp';
+            break;
+            case 5:
+            can = 'Ất';
+            break;
+            case 6:
+            can = 'Bính';
+            break;
+            case 7:
+            can = 'Đinh';
+            break;
+            case 8:
+            can = 'Mậu';
+            break;
+        }
+        switch (namduong%12) {
+            case 0 : 
+            Chi = 'Thân';
+            break;
+            case 1 : 
+            Chi = 'Dậu';
+            break;
+            case 2 : 
+            Chi = 'Tuất';
+            break;
+            case 3 : 
+            Chi = 'Hợi';
+            break;
+            case 4 : 
+            Chi = 'Tý';
+            break;
+            case 5 : 
+            Chi = 'Sửu';
+            break;
+            case 6 : 
+            Chi = 'Dần';
+            break;
+            case 7 : 
+            Chi = 'Mão';
+            break;
+            case 8 : 
+            Chi = 'Thìn';
+            break;
+            case 0 : 
+            Chi = 'Tỵ';
+            break;
+        }
+        document.getElementById('res').innerHTML = "Năm âm lịch là:" + can +' ' + Chi;
+        }
+        
+    </script>
+</body>
+</html>

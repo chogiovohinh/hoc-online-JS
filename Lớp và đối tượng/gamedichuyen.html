@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1000" height="500" style="border:1px solid ;"></canvas>
+    <script>
+       class HCN {
+            constructor(x, y, w, h, c) {
+                this.x = x;
+                this.y = y;
+                this.w = w;
+                this.h = h;
+                this.c = c;
+            }
+
+            draw() {
+                let ctx = document.getElementById('myCanvas').getContext('2d');
+                let speedX = 3;
+                let speedY = 3;
+                ctx.clearRect(0,0,1000,500);
+                ctx.fillStyle = this.c;
+                ctx.fillRect(this.x, this.y, this.w, this.h);
+            }
+            moveRight() {
+                this.x += 5; 
+                this.draw()
+            }
+            moveLeft() {
+                this.x -= 5; 
+                this.draw()
+            }
+            moveUp() {
+                this.y -= 5; 
+                this.draw()
+            }
+            moveDown() {
+                this.y += 5; 
+                this.draw()
+            }
+           
+        }
+
+        let hcn1 = new HCN(50, 50, 50, 50, 'red');
+        hcn1.draw();
+        window.addEventListener('keydown',(e) => {
+            if(e.key == 'ArrowRight') {
+                hcn1.moveRight()
+                console.log(hcn1);
+            }
+        })
+        window.addEventListener('keydown',(e) => {
+            if(e.key == 'ArrowLeft') {
+                hcn1.moveLeft()
+                console.log(hcn1);
+            }
+        })
+        window.addEventListener('keydown',(e) => {
+            if(e.key == 'ArrowUp') {
+                hcn1.moveUp()
+                console.log(hcn1);
+            }
+        })
+        window.addEventListener('keydown',(e) => {
+            if(e.key == 'ArrowDown') {
+                hcn1.moveDown()
+                console.log(hcn1);
+            }
+        })
+
+    </script>
+</body>
+</html>

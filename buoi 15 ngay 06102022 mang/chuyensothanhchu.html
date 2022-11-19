@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //nhập vào một số in ra thành chữ
+        let chu = ['Mươi', 'Mốt', 'Hai', 'Ba', 'Bốn', 'Năm', 'Sáu', 'Bảy', 'Tám', 'Chín'];
+        let so = +prompt("Nhập vào: ");
+        let kq = ''
+        if (so < 10) {
+            switch (so) {
+                case 0:
+                    kq += "Không";
+                    break;
+                case 1:
+                    kq += "Một";
+                    break;
+                default:
+                    kq += chu[so]
+            }
+        } else if (so < 20) {
+            kq += 'Mười '
+            switch (so % 10) {
+                case 0:
+                    kq += '';
+                    break;
+                case 1:
+                    kq += "Một";
+                    break;
+                case 5:
+                    kq += "Lăm";
+                    break;
+                default:
+                    kq += chu[so % 10]
+            }
+        } else {
+        let hangChuc = parseInt(so/10)
+        let hangDV = so % 10;
+        kq += chu[hangChuc];
+
+        switch(hangDV){
+        case 0:
+            break;
+        case 5:
+            kq = kq + 'Mươi' + 'Lăm';
+            break;
+        default:
+            kq = kq + 'Mươi' + chu[so%10];
+
+    }
+}
+
+        alert(kq)
+       
+    </script>
+</body>
+</html>

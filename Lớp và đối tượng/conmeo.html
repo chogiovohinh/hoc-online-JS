@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1000" height="500" style="border:1px solid ;"></canvas>
+    <script>
+      // Con chuot: Can nang
+      // ConMeo Can nang; awn (chuot) : can nang con meo tawng len = can nang con chuot;
+      class ConChuot{
+        constructor(CannangChuot){
+            this.CannangChuot = CannangChuot;
+        }
+        getConCHuot() {
+            return this.CannangChuot
+        }
+      }
+      class ConMeo {
+        constructor(CannangMeo){
+            this.CannangMeo = CannangMeo;
+        }
+        getConmeo() {
+            return this.CannangMeo += ConChuot.CannangChuot;
+        }
+      }
+      let conchuot1 = new ConChuot(1.5);
+      let conmeo1 = new ConMeo(3)
+      alert("caa nang conmeo la:"+ getConmeo());
+    </script>
+</body>
+</html>

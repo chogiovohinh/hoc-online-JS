@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu điểm thi đại học</title>
+</head>
+<body>
+    <div> Môn toán : <input type="text" id="toan"></div>
+    <div>Môn Văn  : <input type="text" id="van"></div>
+    <div> Môn Anh  : <input type="text" id="anh"></div>
+    <div><select name="" id="kv">
+        <option value="KV1">KV1</option>
+        <option value="KV2-NT">KV2-NT</option>
+        <option value="KV2">KV2</option>
+        <option value="KV3">KV3</option>
+    </select></div>
+    <div><button onclick="check()">Tính điểm</button>
+        <h1 id="res"></h1></div>
+    <script>
+       
+        function check() {
+        a = +document.getElementById('toan').value;
+        b = +document.getElementById('van').value;
+        c = +document.getElementById('anh').value;
+        selected = document.getElementById("kv").value;
+        result = a + b + c;
+            switch (selected) {
+                case "KV1":
+                result +=0.75;
+                break;
+                case "KV2-NT":
+                result +=0.5;
+                break;
+                case "KV2":
+                result +=0.25
+                break;
+            }
+            document.getElementById('res').innerHTML = "Điểm của bạn là:"+ result;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" boder="1px radius"></canvas>
+    <script>
+        // // lớp là tập hợp các đối tượng có cùng thuộc tính phương thức
+        
+        // class ConNguoi() {
+        //     ten;
+        //     tuoi;
+        //     congviec;
+        // }
+        // // Đối tượng: cụ thể của 1 lớp
+        // let ng1 = new ConNguoi()
+        class Circle {
+            radius;
+            color;
+            constructor(x, y) {
+                this.radius = x;
+                this.color = y;
+            }
+            getRadius(){
+                return this.radius;
+            }
+
+            getArea() {
+                return Math.PI * this.radius * this.radius
+            }
+            drawCircle() {
+                var ctx = document.getElementById('myCanvas').getContext('2d');
+                ctx.fillStyle = this.color;
+                ctx.arc(100,100,this.radius,0,2*Math.PI);
+                ctx.fill();
+            }
+        }
+
+        let circle1 = new Circle(5, 'Đỏ');
+        alert(circle1.getArea());
+
+// ứng dụng canvas viết phương thức  draw() để vẽ hình lên canvas
+        
+
+    </script>
+</body>
+</html>

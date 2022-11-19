@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1000" height="500" style="border:1px solid ;"></canvas>
+    <script>
+         var ctx = document.getElementById("myCanvas").getContext("2d");
+         let x = 100;
+         let y = 100;
+         let speedX = 3;
+         let speedY = 3;
+         let color = 'red';
+        function drawCircle(x, y, r, color) {
+            ctx.clearRect(0, 0, 1000, 500);
+            ctx.beginPath();
+            ctx.fillStyle = color;
+            ctx.arc(x,y,r,0,2*Math.PI);
+            ctx.fill();
+        }
+        function colorchange(){
+            let rbg1 = Math.floor(Math.random()*255);
+            let rbg2 = Math.floor(Math.random()*255);
+            let rbg3 = Math.floor(Math.random()*255);
+            color = "rgb("+rbg1+","+rbg2+","+rbg3+")";
+        }
+        setInterval(() => {
+            drawCircle(x, y, 50, color);
+            x += speedX;
+            y += speedY;
+            if( x+50 >= 1000 || x <= 50){
+                speedX= -speedX;
+                colorchange()
+            }
+            if( y+50 >= 500 || y <= 50){
+                speedY= -speedY;
+                colorchange()
+            }
+        }, 10)
+
+        // setInterval(() => {
+        //     let rbg1 = Math.floor(Math.random()*255);
+        //     let rbg2 = Math.floor(Math.random()*255);
+        //     let rbg3 = Math.floor(Math.random()*255);
+        //     color = "rgb("+rbg1+","+rbg2+","+rbg3+")";
+        // },1000)
+    </script>
+</body>
+</html>

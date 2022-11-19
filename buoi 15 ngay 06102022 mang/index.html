@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//  // Khởi tạo mảng là dãy số tự tạo và in ra những phần tử chia 5 dư 2
+//  let arr = [1, 4, 5, 6, 7, 12, 14, 16, 17];
+//         for (let i = 0; i< arr.length; i++) {
+//             if (arr[i] % 5 == 2) {
+//                 document.write(arr[i] + '  ')
+//             }
+//         }
+ 
+// Tính tổng
+// let arr = [1, 4, 5, 6, 7, 12, 14, 16, 17];
+// let tong = 0;
+// for(let ind = 0; ind < arr.length; ind ++){
+//     tong +=arr[ind];
+//     count = 1;
+// }
+// document.write("Tong là:"+tong);
+// // tính trung bình các phần tử chia hết cho 3
+// let arr = [1, 4, 5, 6, 7, 12, 14, 16, 17];
+// let tong = 0;
+// let count = 0;
+// for(let ind = 0; ind < arr.length; ind ++){
+//     if(arr[ind]%3==0){
+//         tong+=arr[ind];
+//         count++;
+//     }
+// }
+// document.write("ket qua la:"+(tong/count));
+// Nhập vào n là số phần tử của dãy số
+// nhập arr: lần lượt các phần tử
+//         let arr = [];
+//         let n = +prompt('Mảng có bao nhiêu phần tử: ');
+//         for (let i = 0; i < n; i++) {
+//             arr[i] = +prompt('Phần tử thứ '+(i+1));
+//         }
+//         let count = 0;
+//         let tong = 0;
+//         for (let i = 0; i< arr.length; i++) {
+//             if (arr[i] %3 == 0) {
+//                 tong += arr[i];
+//                 count ++;
+//             }
+//         }
+//         alert("Trung bình là "+tong/count);
+// // nhập vào các phần tử của mảng cho đến khi nhập 0 thì in ra số lượng phần tử chẵn
+//         let arr = [];
+//         let dem = 0;
+//         while(true) {
+//          let item =  prompt('Nhập vào phần tử');
+//          if(item==0) break;
+//          if(item%2==0) {
+//             dem++;
+//          }
+//          arr.push(item)
+//         }
+//         alert(dem);
+//         let arr = [];
+//         let count = 0;
+//         for (let i = 0; ; i++) {
+//             arr[i] = +prompt('Phần tử thứ '+(i+1));
+//             if (arr[i] == 0) {
+//                 alert("Số phần tử chẵn là: "+count);
+//                 break;
+//             }
+//             if (arr[i] % 2 == 0) count++;
+//         }
+// // tìm max
+// let arr=[2,8,1,6,4,2,4,8,7,6];
+// let max= arr[0];
+// let max2 = arr[0];
+// for(let i=0; i< arr.length;i++){
+//     if (max< arr[i]){
+//         max= arr[i]
+//     }
+// }
+// alert("Max = " + max)
+// Tìm max thứ 2
+
+        // let arr = [2,8,1,6,4,2,4,8,7,6];
+        // let max = arr[0];
+        // let max2 = 0
+        // for (let i = 0; i<arr.length; i++ )  {
+        //     if (max < arr[i]) {
+        //     max2=max;
+        //     max = arr[i];
+        //     }
+        //     else if (arr[i]>max2&&arr[i]<max){
+        //         max2=arr[i];
+        //     }
+        // }
+        // alert(max);
+        // alert(max2);
+
+// Nhập vào x tìm vị trí x trong Mảng
+// let arr = [2, 1, 1, 6, 7, 4, 2, 4, 8, 6];
+// let x= prompt(" Nhập x");
+// for (let i = 0; i < arr.length; i++) {
+//     if(x==arr[i]) {
+//     document.write(i);
+//     }  
+// }
+// bài xắp xếp
+// let arr = [2, 1, 1, 6, 7, 4, 2, 4, 8, 6];
+// for(let i=0;i < arr.length-1;i++){
+//     for(let j=i+1; j< arr.length; j++){
+//         if( arr[i]< arr[j]){
+//             let c = arr[i];
+//             arr[i]= arr[j];
+//             arr[j]= c;
+//         }
+//     }
+// }
+// alert(arr)
+// //đếm số lần xuất hiện của phần tử trong mảng
+function dispArr(arr) {
+      for (var i = 0; i < arr.length; ++i) {
+         putstr(arr[i] + " ");
+         if(i%10==9){
+             putstr("\n");
+         }
+      }
+      if(i%10!=0){
+         putstr("\n");
+      }
+} //end function dispArr()
+var nums = [];
+for(var i=0; i<100; ++i){
+      nums[i] = Math.floor(Math.random() * 101);
+}
+dispArr(nums);
+putstr("Enter a number to search for: ");
+var num = parseInt(readline());
+print();
+if (seqSearch(nums, num)) {
+      print(num + " is in the array.");
+}
+else {
+      print(num + " is not in the array.");
+}
+print();
+dispArr(nums); 
+    </script>
+
+
+</body>
+</html>

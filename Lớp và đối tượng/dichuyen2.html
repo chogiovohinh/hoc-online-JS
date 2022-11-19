@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1000" height="500" style="border:1px solid ;"></canvas>
+    <script>
+       class HCN {
+            constructor(x, y, w, h, c,speedX,speedY) {
+                this.x = x;
+                this.y = y;
+                this.w = w;
+                this.h = h;
+                this.c = c;
+                this.speedX =5;
+                this.speedY =5;
+            }
+
+            draw() {
+                let ctx = document.getElementById('myCanvas').getContext('2d');
+                ctx.clearRect(0,0,1000,500);
+                ctx.fillStyle = this.c;
+                ctx.fillRect(this.x, this.y, this.w, this.h);
+            }
+            move() {
+                this.x +=this.speedX;
+                this.y += this.speedY;
+            }
+
+        let hcn1 = new HCN(50, 50, 50, 50, 'red');
+        hcn1.draw();
+        window.addEventListener('keydown',(e) => {
+            if(e.key == 'ArrowRight') {
+                hcn1.speedY = 0;
+                hcn.speedX =5;
+            }
+            if(e.key == 'ArrowLeft') {
+                hcn1.speedY = 0;
+                hcn.speedX = -5;
+            }
+            if(e.key == 'ArrowUp') {
+                hcn1.speedY = 5;
+                hcn.speedX =0;
+            }
+            if(e.key == 'ArrowDown') {
+                hcn1.speedY = -5;
+                hcn.speedX =0;
+            }
+        })
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid ;"></canvas>
+     <script>
+        // var ctx = document.getElementById("myCanvas").getContext("2d");
+        // ctx.moveTo(50,50); di chuyển bút đến điểm 0,0
+        // ctx.lineTo(200,100); ngắm đường thẳng đến một toạ độ
+        // ctx.stroke(); vẽ 
+        //ctx.beginPath();
+        //ctx.fillStyle = 'yellow'; // chọn màu cho nét vẽ
+        //ctx.arc(100,100,100,0,2*Math.PI);
+        // arc(toạ độ tâm trục ngang, toạ độ tâm trục dọc, bán kính,nơi bắt đầu nét vẽ, nơi kết thúc)
+        // Vẽ theo kim đồng hồ
+        //ctx.fill(); // đổ màu, stroke là vẽ nét
+
+        //ctx.font = "30px Arial";
+        //ctx.fillText("Hello Word", 10,50); // chữ, toạ độ ngang, toạ độ dọc
+        //ctx.fillRect(100, 300, 140, 160); // ngang dọc dài rộng
+        
+
+        // vẽ hình chữ nhật dài 300 cao 200 màu tím toạ độ 100, 80
+         // Vẽ hình tròn bán kính 60, toạ độ 200 ,100
+        // var ctx = document.getElementById("myCanvas").getContext("2d")
+        // ctx.fillStyle = 'purple';
+        // ctx.beginPath();
+        // ctx.arc(200,100,60,0,2*Math.PI);
+        // ctx.fill();
+        // ctx.fillRect(100, 80, 300, 200);
+       // Viết hàm nhận vào tạo: toạ độ ngang, dọc, bán kính, màu(rbg);
+       // Dùng hàm để viết chương trình: tạo ra 50 hình tròn có kích cỡ, vị trí, màu sắc ngẫu nhiên
+       var ctx = document.getElementById("myCanvas").getContext("2d");
+       function veHinh(x, y, r, color) {
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.arc(x,y,r,0,2*Math.PI);
+        ctx.fill();
+       }
+       for(let i=0; i<50; i++){
+        let x = Math.floor(Math.random()*500);
+        let y = Math.floor(Math.random()*500);
+        let r = Math.floor(Math.random()*50);
+        let rbg1 = Math.floor(Math.random()*255);
+        let rbg2 = Math.floor(Math.random()*255);
+        let rbg3 = Math.floor(Math.random()*255);
+        let color = "rgb("+rbg1+","+rbg2+","+rbg3+")";
+        veHinh(x , y, r, color)
+       }
+        
+     </script>
+</body>
+</html>

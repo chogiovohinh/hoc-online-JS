@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quan Lý sản phẩm</title>
+</head>
+<body>
+    <div>
+        <p>Add product</p>
+        <input type="text" id="add">
+        <button onclick="addProduct()">Add</button>
+        <p>display all products</p>
+    </div>
+    <table id="displayArea" border="1">
+
+    </table>
+    <script>
+        let listProduct = ['ip12', 'note10', 's10', 'ip13 xx Max', 'Nokia 1280'];
+        displayALL();
+
+        function displayALL() {
+            let str =    '    <tr>\n' +
+                         '   <td>Product Name </td>\n' +
+                         '   <td></td>\n' +
+                         '   <td>' + listProduct.length + ' products</td>\n' +
+                         '   </tr>';
+            for (let i = 0; i < listProduct.length; i++) {
+                str += '<tr><td>' + listProduct[i] + '</td>' +
+                    '<td><button onclick="showFormEdit(' + i + ')">Edit</button></td>' +
+                    '<td><button onclick="deleteProduct(' + i + ')">Delete</button></td></tr>'
+            }
+            document.getElementById('displayArea').innerHTML = str;
+        }
+
+        function addProduct() {
+            let productName = document.getElementById('add').value;
+            document.getElementById('add').value = '';
+            listProduct.push(productName);
+            console.log(listProduct);
+            displayALL();
+        }
+
+        function deleteProduct(inDex) {
+            listProduct.splice(inDex, 1);
+            displayALL();
+        }
+
+        function showFormEdit(inDex) {
+            let str = ' ';
+            str = '<input type="text" id="editProduct" value="' + listProduct[inDex] + '">button onclick="saveProduct(' + inDex + ')">Save</button>';
+            document.getElementById('edit').innerHTML = str;
+        }
+
+        function saveProduct(inDex) {
+            listProduct[inDex] = document.getElementById('editProduct').value;
+            document.getElementById('edit').innerHTML = ' ';
+            displayALL();
+        }
+    </script>
+</body>
+</html>
